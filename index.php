@@ -15,21 +15,17 @@
             if ($conn->connect_error) {
                 die("Błąd połączenia z bazą danych: " . $conn->connect_error);
             }
-
-            // Nazwa tabeli, którą chcesz wyświetlić
+            
             $tabela = "games";
 
-            // Zapytanie SQL do wyświetlenia danych z tabeli
             $sql = "SELECT * FROM $tabela";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                // Wyświetl dane z tabeli
                 echo "<h1>Games database</h1>";
                 echo "<table>";
                 echo "<tr><th>LP</th><th>Name</th><th>Description</th></tr>";
                 while ($row = $result->fetch_assoc()) {
-                    // Tworzenie linku do każdego rekordu
                     $id = $row["id"];
                     $title = $row["title"];
                     $description = $row["description"];
@@ -40,7 +36,6 @@
                 echo "Brak danych w tabeli.";
             }
 
-            // Zakończ połączenie po zakończeniu operacji
             $conn->close();
             
             echo "<h2>Click on the table to find out more about these games</h2>";
