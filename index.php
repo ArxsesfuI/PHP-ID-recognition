@@ -25,9 +25,9 @@
 
             if ($result->num_rows > 0) {
                 // Wyświetl dane z tabeli
-                echo "<h1>Baza danych gier</h1>";
+                echo "<h1>Games database</h1>";
                 echo "<table>";
-                echo "<tr><th>LP</th><th>Nazwa</th><th>Description</th></tr>";
+                echo "<tr><th>LP</th><th>Name</th><th>Description</th></tr>";
                 while ($row = $result->fetch_assoc()) {
                     // Tworzenie linku do każdego rekordu
                     $id = $row["id"];
@@ -43,7 +43,7 @@
             // Zakończ połączenie po zakończeniu operacji
             $conn->close();
             
-            echo "<h2>Kliknij w grę, aby dowiedzieć się o niej więcej</h2>";
+            echo "<h2>Click on the table to find out more about these games</h2>";
             echo "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum a sapien sed faucibus. Vestibulum aliquet eleifend maximus. Integer ipsum dui, commodo eu dui ac, scelerisque porta justo. Praesent aliquam, ipsum eget cursus interdum, felis sem porttitor augue, vitae scelerisque sapien lacus eget risus. Donec non est eget purus dictum consequat in ut dui. Sed mattis lorem ac ligula dictum, scelerisque pulvinar quam dictum. Curabitur porttitor, velit quis lobortis tristique, ligula metus lobortis enim, nec condimentum nisl ante sed neque. Aenean efficitur condimentum facilisis. Sed mauris dui, vehicula nec semper in, porttitor in augue. Maecenas porttitor massa vitae lectus posuere varius. Donec eleifend nibh in odio laoreet maximus.
 
             Sed laoreet sagittis dictum. Sed viverra felis eu blandit ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis ultricies augue lacus, a consectetur elit vulputate semper. Aliquam erat volutpat. Quisque lacinia placerat ante in placerat. Etiam fringilla erat nec mi rutrum, eget ultrices ipsum fringilla. Mauris varius nec magna lacinia sodales.</p>";
