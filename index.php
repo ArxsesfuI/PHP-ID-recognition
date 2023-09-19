@@ -5,12 +5,12 @@
     </head>
     <body>
         <?php
-            $servername = "localhost";
+            $servername = "localhost";    //Connection with database
             $username = "root";
             $password = "";
             $dbname = "baza gier";
 
-            $conn = new mysqli($servername, $username, $password, $dbname);
+            $conn = new mysqli($servername, $username, $password, $dbname);    
 
             if ($conn->connect_error) {
                 die("Błąd połączenia z bazą danych: " . $conn->connect_error);
@@ -18,10 +18,10 @@
             
             $tabela = "games";
 
-            $sql = "SELECT * FROM $tabela";
+            $sql = "SELECT * FROM $tabela";    //SQL query
             $result = $conn->query($sql);
 
-            if ($result->num_rows > 0) {
+            if ($result->num_rows > 0) {    //Table
                 echo "<h1>Games database</h1>";
                 echo "<table>";
                 echo "<tr><th>LP</th><th>Name</th><th>Description</th></tr>";
