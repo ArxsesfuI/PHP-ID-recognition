@@ -5,4 +5,4 @@ Database connected with PHP file. ID value from database will affect PHP appeara
 ![ALT game.php](README/screenshot2.PNG)<br><br>
 After we click on something in the table <i>game.php</i> is opened. Content of this file depends of id (or game title/description connected to this id) we clicked.
 
-<b>It is test to check how PHP gets values from database.</b>
+<b>This is test to check how PHP gets values from database.</b>
